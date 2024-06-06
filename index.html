@@ -1,21 +1,24 @@
-<<! DOCTYPE html>
-<HTML>
-    <cabeza>
-<div class="cookies" id="permission">
-        <p>This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic.
-           <br>By using our website, you agree to our Privacy Policy and our Cookies Policy.
-        </p>
-    <script id="iframe-demo" src="https://www.youtube.com/iframe_api"></script>
-    cookieConsent.addEventListener('click', () => {
-        player.seekTo(0); //  player = new YT.Player('video-frame');
-        player.unMute();    
-    });
-    <button onclick="hide()" id="accept">Accept</button></center>
-    .ytplayer{
- pointer-events: none;
-}
-    </cabeza>
-    <cuerpo>
-        
-    </cuerpo>
-</HTML>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #rick {
+                display: none;
+            }
+        </style>
+        <script>
+            function playRick() {
+                const rick = document.getElementById('rick'); // get element
+                rick.style.display = 'block'; // unhide video
+                rick.requestFullscreen(); // enter full screen mode
+                rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1'); // autoplay video
+            }
+        </script>
+    </head>
+    <body>
+        <iframe id="rick" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button onclick="playRick();">Boton para ver la IP del server de bedwars</button>
+    </body>
+</html>
