@@ -1,24 +1,21 @@
 <<! DOCTYPE html>
 <HTML>
     <cabeza>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <estilo>
-            #rick {
- Pantalla: Ninguna;
-            }
-        </estilo>
-        <Guión>
-            función playRick() {
-                const rick = documento.getElementById('rick');   Elemento GET
-                Rick.estilo.display = 'bloque';   Mostrar video
-                Rick.requestFullscreen();   Entrar en el modo de pantalla completa
-                Rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1');   Reproducción automática de vídeo
-            }
-        </Guión>
+<div class="cookies" id="permission">
+        <p>This website uses cookies to provide necessary website functionality, improve your experience and analyze our traffic.
+           <br>By using our website, you agree to our Privacy Policy and our Cookies Policy.
+        </p>
+    <script id="iframe-demo" src="https://www.youtube.com/iframe_api"></script>
+    cookieConsent.addEventListener('click', () => {
+        player.seekTo(0); //  player = new YT.Player('video-frame');
+        player.unMute();    
+    });
+    <button onclick="hide()" id="accept">Accept</button></center>
+    .ytplayer{
+ pointer-events: none;
+}
     </cabeza>
     <cuerpo>
-        <iframe id="rick" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="acelerómetro; reproducción automática; escritura en el portapapeles; medios cifrados; giroscopio; imagen en imagen" allowfullscreen></iframe>
-        <button onclick="playRick();" >Haga clic en Yo</botón>
+        
     </cuerpo>
 </HTML>
